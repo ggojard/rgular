@@ -1,0 +1,14 @@
+<div class="home" ng-controller="ContextController">
+  <div>
+    <h1> List of all contexts:</h1>
+
+    <div>
+      <ul class="contexts">
+        <li ng-repeat="context in contexts ">
+          <h2> {{information.id}}) {{information.created}} : {{information.location}} : {{information.name}}</h2>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>

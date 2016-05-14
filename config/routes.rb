@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   root 'home#index'
-  get 'comments/index'
-  get 'comments/' => 'comments#view'
+  # get 'contexts/index'
+  get 'contexts/:id' => 'contexts#show'
+  get 'contexts/' => 'contexts#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

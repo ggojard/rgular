@@ -1,0 +1,21 @@
+{
+  "name": "rgular",
+  "homepage": "https://github.com/ggojard/rgular",
+  "authors": [
+    "Guillaume Gojard <ggojard@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5"
+  }
+}
