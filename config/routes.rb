@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   root 'home#index'
   # get 'contexts/index'
   get 'contexts/:id' => 'contexts#show'
-  get 'contexts/' => 'contexts#index'
+  get 'contexts' => 'contexts#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

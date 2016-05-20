@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "^1.5.5"
+    "angular": "^1.5.5",
+    "angular-route": ">0.0.0"
   }
 }
