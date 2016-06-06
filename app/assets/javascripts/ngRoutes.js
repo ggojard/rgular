@@ -7,8 +7,8 @@
     function($routeProvider) {
       $routeProvider.
       when('/', {
-        templateUrl: '/templates/home.ng.html',
-        controller: 'HomeController'
+        templateUrl: '/templates/home.ng.html'
+        // ,controller: 'HomeController'
       })
       .
       when('/contexts/', {
@@ -19,24 +19,11 @@
       when('/contexts/:contextId', {
         templateUrl: '/templates/contexts/context.ng.html',
         controller: 'ContextController'
-      })
-      // when('/buildings/:buildingId', {
-      //   templateUrl: '/templates/buildings/building.ng.html',
-      //   controller: 'BuildingController'
-      // }).
-      // when('/floors/:floorId', {
-      //   reloadOnSearch: false,
-      //   templateUrl: '/templates/floors/show.ng.html'
-      // }).
-      // when('/people', {
-      //   templateUrl: '/templates/people/index.ng.html',
-      //   controller: 'PeopleController'
-      // }).
-      // when('/people/:peopleId', {
-      //   templateUrl: '/templates/people/show.ng.html'
-      // });
-
-      .
+      }).
+      when('/contexts/:contextId/edit', {
+        templateUrl: '/templates/contexts/edit.ng.html',
+        controller: 'ContextControllerEdit'
+      }).
       otherwise({
         redirectTo: '/'
       });

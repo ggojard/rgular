@@ -1,0 +1,11 @@
+
+<div class="context">
+  <a href="/#/contexts"><button>Back</button></a>
+  <h1> Edit context: {{context.id}}</h1>
+  <ul class="context">
+    <li>Name: <input ng-model="context.name" size={{context.name.length}}></input> </li>
+      <!-- <li>Created at: <input ng-model="context.created_at" type="datetime" size={{context.created_at.length}}></input> </li> -->
+    <li>Location: <input ng-model="context.location" size={{context.location.length}}></input> </li>
+  </ul>
+  <button ng-click="update();">Update</button>
+</div>

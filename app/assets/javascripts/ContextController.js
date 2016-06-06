@@ -8,24 +8,32 @@
 
 rgular.app.controller('ContextController', function($scope, $http, $routeParams) {
   $http.get('/contexts/' + $routeParams.contextId + '.json').success(function(context) {
-    $scope.information = {
-      id: context.id,
-      location: context.location,
-      name: context.name,
-      created: context.created_at,
-    };
+    $scope.context = context;
   });
 });
 
 
 rgular.app.controller('ContextControllerIndex', function($scope, $http, $routeParams) {
   $http.get('/contexts.json').success(function(contexts) {
-    // console.log('contexts:');
-    // console.log(contexts);
+    // console.log('contexts:' + contexts);
 
     $scope.contexts = contexts // need to provide the content for the angular view
     // $scope.templates = templates;
     // $rootScope.$emit('stop-loading');
   });
-
 });
+
+rgular.app.controller('ContextControllerEdit', function($scope, $http, $routeParams, $location) {
+  $scope.update = function() {
+    $http.put('/contexts/' + $routeParams.contextId + '.json', $scope.context).success(function(res) {
+      console.debug(res);
+      $location.path('/contexts/');
+    });
+
+  }
+  $http.get('/contexts/' + $routeParams.contextId + '.json').success(function(context) {
+    $scope.context = context;
+  });
+});
+
+
